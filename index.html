@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FSTI｜FPS玩家性格测试</title>
+  <meta
+    name="description"
+    content="15道题测出你的 FSTI 类型：这不是严肃人格测试，这是给 FPS 玩家做的娱乐向性格测试。"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">FSTI / FPS STYLE TYPE INDICATOR</p>
+        <h1>不是测你会不会玩<br>是测你是什么类型玩家</h1>
+        <p class="hero-text">
+          15道题，3个维度，27种结果。纯娱乐，不科学，但大概率能测出你在队友眼里是什么类型玩家。
+        </p>
+      </div>
+      <div class="hero-badge">
+        <span>热门结论</span>
+        <strong id="hero-highlight">LUS</strong>
+        <p>阴间道具哥</p>
+      </div>
+    </header>
+
+    <main class="app-frame">
+      <section class="panel intro-panel active" id="intro-panel">
+        <div class="panel-head">
+          <span class="panel-kicker">开测前先看</span>
+          <h2>FSTI 玩家性格测试</h2>
+        </div>
+        <div class="intro-grid">
+          <article class="intro-card">
+            <h3>你会测到什么</h3>
+            <p>你的结果会由 3 个维度拼出来：进场方式、作战偏好、队内人格。</p>
+          </article>
+          <article class="intro-card">
+            <h3>怎么答更准</h3>
+            <p>别选“理想中的你”，选你在路人局、逆风局、朋友局里最常暴露出来的那个版本。</p>
+          </article>
+          <article class="intro-card">
+            <h3>这测的是什么</h3>
+            <p>不是枪法，不是段位，是你在 FPS 里最容易暴露出来的打法、习惯和气场。</p>
+          </article>
+        </div>
+        <button class="primary-btn" id="start-btn" type="button">开始测试</button>
+      </section>
+
+      <section class="panel quiz-panel" id="quiz-panel" aria-live="polite">
+        <div class="quiz-topbar">
+          <div>
+            <p class="panel-kicker">题目进度</p>
+            <h2 id="question-counter">第 1 / 15 题</h2>
+          </div>
+          <div class="progress-wrap" aria-hidden="true">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <span id="progress-text">6%</span>
+          </div>
+        </div>
+
+        <article class="question-card">
+          <p class="question-axis" id="question-axis">进场方式</p>
+          <h3 class="question-title" id="question-title"></h3>
+          <div class="options" id="options"></div>
+        </article>
+
+        <div class="quiz-actions">
+          <button class="ghost-btn" id="prev-btn" type="button">上一题</button>
+        </div>
+      </section>
+
+      <section class="panel result-panel" id="result-panel" aria-live="polite">
+        <div class="result-head">
+          <p class="panel-kicker">你的 FSTI 结果</p>
+          <div class="type-chip" id="result-code">LUS</div>
+          <h2 id="result-name">阴间道具哥</h2>
+          <p class="result-tagline" id="result-tagline"></p>
+        </div>
+
+        <div class="result-grid">
+          <article class="result-card spotlight">
+            <h3>一句话诊断</h3>
+            <p id="result-summary"></p>
+          </article>
+          <article class="result-card">
+            <h3>你的拿手戏</h3>
+            <ul id="result-strengths"></ul>
+          </article>
+          <article class="result-card">
+            <h3>最容易被吐槽</h3>
+            <ul id="result-weaknesses"></ul>
+          </article>
+          <article class="result-card">
+            <h3>路人局评价</h3>
+            <p id="result-impression"></p>
+          </article>
+        </div>
+
+        <div class="dimension-grid" id="dimension-grid"></div>
+
+        <div class="result-actions">
+          <button class="primary-btn" id="copy-btn" type="button">复制结果文案</button>
+          <button class="ghost-btn" id="restart-btn" type="button">重新测试</button>
+        </div>
+        <p class="result-note">部分内容由AI生成，仅供娱乐    抖音号：fpslover</p>
+      </section>
+    </main>
+  </div>
+
+  <template id="option-template">
+    <button class="option-btn" type="button">
+      <span class="option-letter"></span>
+      <span class="option-text"></span>
+    </button>
+  </template>
+
+  <script src="./app.js"></script>
+</body>
+</html>
