@@ -368,6 +368,113 @@ body::before {
   letter-spacing: 0.02em;
 }
 
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding: 18px 6px 0;
+  color: var(--muted);
+}
+
+.footer-copy {
+  margin: 0;
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+.footer-link {
+  color: var(--sky);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-link:hover {
+  border-bottom-color: currentColor;
+}
+
+.legal-shell {
+  width: min(920px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 36px 0 56px;
+}
+
+.legal-hero,
+.legal-card {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.legal-hero {
+  padding: 28px;
+  background:
+    linear-gradient(145deg, rgba(255, 122, 24, 0.14), rgba(120, 216, 255, 0.08)),
+    var(--panel);
+}
+
+.legal-hero h1 {
+  margin: 10px 0 12px;
+  font-family: "Bahnschrift", "Arial Narrow", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+.legal-lead {
+  margin: 0;
+  max-width: 760px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.legal-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.legal-card {
+  padding: 22px;
+  background: var(--panel);
+}
+
+.legal-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.legal-card p,
+.legal-card li {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.legal-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.legal-back {
+  display: inline-flex;
+  margin-top: 18px;
+  color: var(--sky);
+  text-decoration: none;
+}
+
+.legal-back:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 860px) {
   .hero,
   .intro-grid,
@@ -394,7 +501,13 @@ body::before {
   }
 
   .panel,
-  .hero-badge {
+  .hero-badge,
+  .legal-hero,
+  .legal-card {
     padding: 20px;
+  }
+
+  .site-footer {
+    padding-top: 14px;
   }
 }

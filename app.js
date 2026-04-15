@@ -325,8 +325,8 @@ const typeMeta = {
     impression: "像那种全队都急了，只有你还在认真算这波到底值不值的人。"
   },
   LES: {
-    name: "沉默保安六",
-    tagline: "你像地图上的幽灵保安，不说话，但总能活到最后。",
+    name: "沉默老六",
+    tagline: "你像地图上的幽灵玩家，不说话，但总能活到最后。",
     summary: "你偏安静、偏谨慎、偏会藏，擅长把自己放在能打一换一甚至一换多的位置。你不抢镜头，但非常难处理。",
     strengths: ["存在感低但威胁高。", "残局质量稳定，少犯无效错误。", "很懂如何把位置价值吃满。"],
     weaknesses: ["容易被队友觉得信息量不够。", "回合前期的主动性会偏弱。"],
@@ -373,7 +373,7 @@ const typeMeta = {
     impression: "像那种防守一开就已经在脑子里排完流程表的人。"
   },
   HUS: {
-    name: "技能仓管哥",
+    name: "技能管理大师",
     tagline: "你的道具和技能像库存管理，交得不浪费，留得有理由。",
     summary: "你不是那种喜欢花里胡哨乱交资源的人，你更像一个冷静的阵地管理员。对你来说，技能不是秀的，是用来让对面难受、让自己舒服的。",
     strengths: ["道具使用节制且有效。", "防守拖时间能力突出。", "很会把有限资源用在刀刃上。"],
@@ -389,7 +389,7 @@ const typeMeta = {
     impression: "像那种永远不吵不急，但大家都默认这点交给你的人。"
   },
   HEI: {
-    name: "止损政委",
+    name: "战地政委",
     tagline: "你不只是自己想稳，你还想教育大家为什么不能乱送。",
     summary: "你对回合价值和团队节奏特别敏感，最受不了的就是没必要的白给。你是那种既想守住位置，也想守住全队节奏的人。",
     strengths: ["止损判断出色，少做亏本选择。", "回合判断偏成熟，不容易乱。", "能让队伍整体更稳。"],
@@ -597,7 +597,8 @@ function renderResult() {
     `我的 FSTI 是：${result.code}｜${result.meta.name}`,
     result.meta.tagline,
     `一句话诊断：${result.meta.summary}`,
-    `路人局评价：${result.meta.impression}`
+    `路人局评价：${result.meta.impression}`,
+    "抖音：fpslover｜部分内容由AI生成，仅供娱乐"
   ].join("\n");
 
   showPanel(resultPanel);
